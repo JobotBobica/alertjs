@@ -232,8 +232,8 @@ Alert.htmlEncode = function (text) {
     return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/  /g, '&nbsp;&nbsp;').replace(/\n/g, '<br />');
 }
 
-Alert.showLoading = function (url) {
-    Alert.show("Loading...", null, [], "LOADING", 230, 115, url, true);
+Alert.showLoading = function (url, message) {
+    Alert.show(message === null ? "Loading..." : message, null, [], "LOADING", 230, 115, url, true);
 }
 
 Alert.showWebResource = function (webResourceName, width, height, title, buttons, baseUrl, preventCancel, padding) {
